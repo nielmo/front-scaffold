@@ -26,6 +26,9 @@
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "postcss-loader": "^3.0.0",
+    "postcss-momentum-scrolling": "^1.9.15",
+    "prettier": "1.18.2",
+    "pretty-quick": "^1.11.1",
     "pug-html-loader": "^1.1.5",
     "raw-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
@@ -38,16 +41,28 @@
     "webpack-notifier": "^1.7.0"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0"
+    "babel-polyfill": "^6.26.0",
+    "husky": "^3.0.5"
   },
   "postcss": {
     "plugins": {
-      "autoprefixer": {}
+      "autoprefixer": {},
+      "postcss-momentum-scrolling": [
+        "hidden",
+        "scroll",
+        "auto",
+        "inherit"
+      ]
     }
   },
   "browserslist": [
     "last 10 version",
     "not dead",
     "iOS >= 9"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
 }
