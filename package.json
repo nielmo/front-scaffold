@@ -1,0 +1,53 @@
+{
+  "name": "front-scaffold",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "build": "webpack --mode production --config 'webpack/webpack.config.build.js'",
+    "start": "webpack-dev-server --mode development --open --watch"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.4.3",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^2.1.0",
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-loader": "^3.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-pug-plugin": "^0.3.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "postcss-loader": "^3.0.0",
+    "pug-html-loader": "^1.1.5",
+    "raw-loader": "^1.0.0",
+    "sass-loader": "^7.1.0",
+    "stylelint": "^9.9.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-webpack-plugin": "^0.10.5",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-notifier": "^1.7.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "last 10 version",
+    "not dead",
+    "iOS >= 9"
+  ]
+}

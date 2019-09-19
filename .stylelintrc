@@ -1,0 +1,8 @@
+{
+  "extends": "stylelint-config-standard",
+  "ignoreFiles": [
+    "app/webroot/scss/trumps/*.scss",
+    "app/webroot/scss/generics/*.scss",
+    "app/webroot/scss/tools/*.scss"
+  ]
+}
