@@ -4,8 +4,10 @@
   "description": "",
   "main": "",
   "scripts": {
-    "build": "webpack --mode production --config 'webpack/webpack.config.build.js'",
-    "start": "webpack-dev-server --mode development --open --watch"
+    "start": "webpack-dev-server --mode development --open --watch",
+    "watch:css": "webpack --mode development --config 'webpack/webpack.config.css.js' --watch",
+    "build:css": "webpack --mode production --config 'webpack/webpack.config.css.js'",
+    "build:all": "webpack --mode production --config 'webpack/webpack.config.build.js'"
   },
   "author": "",
   "license": "MIT",
