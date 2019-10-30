@@ -10,24 +10,20 @@ const templates = [];
 const dir = 'src';
 const files = fs.readdirSync(dir);
 
-files.forEach((file) => {
+files.forEach(file => {
   if (file.match(/\.pug$/)) {
     const filename = file.substring(0, file.length - 4);
     templates.push(
       new HtmlWebpackPlugin({
         template: `${dir}/${filename}.pug`,
         filename: `${filename}.html`,
-        inject: false,
-      }),
+      })
     );
   }
 });
 
 module.exports = {
-  entry: [
-    './src/js/index.js',
-    './src/scss/style.scss',
-  ],
+  entry: ['./src/js/index.js', './src/scss/style.scss'],
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
@@ -36,10 +32,7 @@ module.exports = {
     rules: [
       {
         test: /\.pug$/,
-        use: [
-          'raw-loader',
-          'pug-html-loader',
-        ]
+        use: ['raw-loader', 'pug-html-loader'],
       },
       {
         test: /\.scss$/,
