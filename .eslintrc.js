@@ -4,9 +4,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: [
-    'airbnb-base',
-  ],
+  extends: ['airbnb-base'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -15,6 +13,8 @@ module.exports = {
     ecmaVersion: 2018,
   },
   rules: {
-    "comma-dangle": ["error", "only-multiline"],
+    'comma-dangle': ['error', 'only-multiline'],
+    'linebreak-style': 0,
+    'arrow-parens': 0,
   },
 };
